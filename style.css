@@ -1,0 +1,82 @@
+:root {
+  --deg: 0deg;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 2rem;
+  margin: 0 1rem;
+}
+
+.circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #7f5af0 var(--deg),
+    #0fa9ff calc(var(--deg) + 0.25deg),
+    #222 calc(var(--deg) + 0.25deg) 360deg
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px #7f5af077;
+  transition: background 0.1s linear;
+}
+
+.time {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  transition: transform 0.1s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#laps {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow: auto;
+  width: 260px;
+  margin: 0;
+  border-top: 1px solid #333;
+}
+
+#laps li {
+  padding: 0.4rem 0.2rem;
+  border-bottom: 1px solid #222;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.9;
+}
